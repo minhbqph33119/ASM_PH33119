@@ -18,6 +18,7 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.ShoppingBag
 import androidx.compose.material.icons.rounded.ShoppingCart
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -87,16 +88,6 @@ fun ProductItem(index: Int) {
             verticalArrangement = Arrangement.spacedBy(5.dp) // Vertical spacing between the image and text
         ) {
             Box(modifier = Modifier.fillMaxSize()){
-//                AsyncImage(
-//                    model = product.image,
-//                    contentDescription = "Product Image",
-//                    modifier = Modifier
-//                        .fillMaxWidth()
-//                        .height(150.dp) // Adjust the height as needed
-//                        .clip(RoundedCornerShape(10.dp)),
-//                    contentScale = ContentScale.Crop
-//                )
-
                 Image(painter = painterResource(id = product.image),
                     contentDescription ="",
                     modifier = Modifier
@@ -127,7 +118,7 @@ fun ProductItem(index: Int) {
 
                     ) {
                     Icon(
-                        imageVector = Icons.Rounded.ShoppingCart,
+                        imageVector = Icons.Rounded.ShoppingBag,
                         contentDescription = "",
                         Modifier
                             .size(20.dp),

@@ -70,6 +70,12 @@ dependencies {
     // Jetpack Compose Integration
     implementation("androidx.navigation:navigation-compose:$nav_version")
 
+    //icon
+    implementation ("androidx.compose.material:material-icons-extended:1.6.7")
+
+    //Anh tu tren mang
+    implementation("io.coil-kt:coil-compose:2.1.0")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

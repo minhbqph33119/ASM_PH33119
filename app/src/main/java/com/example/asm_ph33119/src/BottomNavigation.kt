@@ -5,10 +5,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.outlined.Bookmark
+import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Notifications
@@ -77,7 +80,7 @@ fun MyBottomAppBar() {
 
                 IconButton(
                     onClick = {
-                        selected.value = Icons.Default.Favorite
+                        selected.value = Icons.Default.Bookmark
                         navigationController.navigate(Screens.BookMark.screen){
                             popUpTo(0)
                         }
@@ -85,7 +88,7 @@ fun MyBottomAppBar() {
                     modifier = Modifier.weight(1f)
                 )
                 {
-                    Icon(if (selected.value == Icons.Default.Favorite) Icons.Default.Favorite else Icons.Outlined.FavoriteBorder,
+                    Icon(if (selected.value == Icons.Default.Bookmark) Icons.Default.Bookmark else Icons.Outlined.BookmarkBorder,
                         contentDescription = "",
                         modifier = Modifier.size(24.dp),
                     )

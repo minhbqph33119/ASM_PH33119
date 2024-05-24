@@ -7,11 +7,21 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Bed
+import androidx.compose.material.icons.outlined.Chair
+import androidx.compose.material.icons.outlined.ChairAlt
+import androidx.compose.material.icons.outlined.Star
+import androidx.compose.material.icons.outlined.TableBar
+import androidx.compose.material.icons.rounded.Bed
+import androidx.compose.material.icons.rounded.Chair
+import androidx.compose.material.icons.rounded.ChairAlt
 import androidx.compose.material.icons.rounded.Star
+import androidx.compose.material.icons.rounded.TableBar
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -29,18 +39,18 @@ class CategorySection {
 }
 
 val items = listOf(
-    Categories(1, "Popular", Icons.Rounded.Star, false),
-    Categories(2, "Chair", Icons.Rounded.Star, false),
-    Categories(3, "Table", Icons.Rounded.Star, false),
-    Categories(4, "Armchair", Icons.Rounded.Star, false),
-    Categories(4, "Bed", Icons.Rounded.Star, false),
+    Categories(1, "Popular", Icons.Outlined.Star, false),
+    Categories(2, "Chair", Icons.Outlined.ChairAlt, false),
+    Categories(3, "Table", Icons.Outlined.TableBar, false),
+    Categories(4, "Armchair", Icons.Outlined.Chair, false),
+    Categories(4, "Bed", Icons.Outlined.Bed, false),
 
 
     )
 @Preview
 @Composable
 fun CategoriesSection () {
-    LazyRow {
+    LazyRow(modifier = Modifier.padding(10.dp).background(Color.White).padding(5.dp)) {
         items(items.size) { index ->
             CategoryItem(index)
         }
@@ -70,6 +80,7 @@ fun CategoryItem(index: Int) {
 
         ) {
             Icon(imageVector = category.image,
+                modifier = Modifier.size(24.dp),
                 contentDescription = "Category",
                 tint = MaterialTheme.colorScheme.onSecondaryContainer)
             Spacer(Modifier.height(8.dp))
