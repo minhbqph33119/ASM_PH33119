@@ -45,12 +45,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
+import androidx.navigation.NavHostController
 import com.example.asm_ph33119.R
+import com.example.asm_ph33119.ui.theme.Screens
 
 
-@Preview(showBackground = true)
+
 @Composable
-fun ProductDetail(){
+fun ProductInformation(navControl: NavHostController){
     val buttonColors = listOf(Color(0xFFFF0F0F0), Color(0xFFB4916C), Color(0xFFE4CBAD))
     var soLong = remember {mutableIntStateOf(1) }
 
@@ -87,7 +89,7 @@ fun ProductDetail(){
                     contentScale = ContentScale.FillHeight
 
                 )
-                IconButton(onClick = { /*TODO*/ },
+                IconButton(onClick = { navControl.popBackStack() },
                     modifier = Modifier
                         .padding(top = 40.dp)
                         .size(55.dp)

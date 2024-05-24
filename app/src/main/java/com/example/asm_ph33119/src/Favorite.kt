@@ -1,6 +1,7 @@
 package com.example.asm_ph33119.src
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -29,11 +30,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.asm_ph33119.compose.FavoriteSection
+import com.example.asm_ph33119.ui.theme.Screens
 
-@Preview(showBackground = true)
+
 @Composable
-fun Favorite(){
+fun Favorite(navControl: NavHostController){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -63,7 +66,8 @@ fun Favorite(){
             Icon(
                 Icons.Outlined.ShoppingCart,
                 contentDescription = null,
-                modifier = Modifier.size(30.dp))
+                modifier = Modifier.size(30.dp)
+                    .clickable { navControl.navigate(Screens.Cart.screen) })
 
         }
 

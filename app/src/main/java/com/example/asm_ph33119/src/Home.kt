@@ -1,5 +1,6 @@
 package com.example.asm_ph33119.src
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -21,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.asm_ph33119.compose.CategoriesSection
 import com.example.asm_ph33119.compose.ProductSection
+import com.example.asm_ph33119.ui.theme.Screens
 
 
 @Composable
@@ -52,7 +54,8 @@ fun Home(navControl: NavHostController){
             }
             Icon(Icons.Outlined.ShoppingCart,
                 contentDescription = null,
-                modifier = Modifier.size(30.dp))
+                modifier = Modifier.size(30.dp)
+                    .clickable { navControl.navigate(Screens.Cart.screen) })
 
         }
 

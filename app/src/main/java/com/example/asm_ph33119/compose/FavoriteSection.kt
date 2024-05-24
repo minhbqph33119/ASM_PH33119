@@ -31,8 +31,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.asm_ph33119.R
 import com.example.asm_ph33119.data.Products
 
@@ -98,8 +100,8 @@ fun FavoriteItem(index: Int){
                         contentScale = ContentScale.Crop
                     )
                     Column(modifier = Modifier.padding(start = 20.dp)) {
-                        Text(text = fav.name, color = Color(0xff606060))
-                        Text(text = "$${fav.price}")
+                        Text(text = fav.name, color = Color(0xff606060), fontSize = 15.sp)
+                        Text(text = "$${fav.price}", fontSize = 20.sp, fontWeight = FontWeight.Bold)
                     }
                 }
                 Column(

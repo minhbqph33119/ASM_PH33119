@@ -148,7 +148,7 @@ fun MyBottomAppBar(navControl: NavHostController) {
             modifier = Modifier.padding(paddingValues)
         ) {
             composable(Screens.Home.screen){ Home(navControl)}
-            composable(Screens.BookMark.screen){ Favorite() }
+            composable(Screens.BookMark.screen){ Favorite(navControl) }
             composable(Screens.Notification.screen){ Notification() }
             composable(Screens.Profile.screen){ Profile() }
 
