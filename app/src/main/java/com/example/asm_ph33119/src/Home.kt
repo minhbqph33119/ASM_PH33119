@@ -18,12 +18,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import com.example.asm_ph33119.compose.CategoriesSection
 import com.example.asm_ph33119.compose.ProductSection
 
-@Preview(showBackground = true)
+
 @Composable
-fun Home(){
+fun Home(navControl: NavHostController){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -56,7 +57,7 @@ fun Home(){
         }
 
         CategoriesSection()
-        ProductSection()
+        ProductSection(navControl)
 
     }
 }

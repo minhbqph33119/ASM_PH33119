@@ -19,9 +19,11 @@ import androidx.navigation.compose.rememberNavController
 import com.example.asm_ph33119.src.BottomNavigation
 import com.example.asm_ph33119.src.Home
 import com.example.asm_ph33119.src.Login
+import com.example.asm_ph33119.src.ProductDetail
 import com.example.asm_ph33119.src.Signin
 import com.example.asm_ph33119.src.Welcome
 import com.example.asm_ph33119.ui.theme.ASM_PH33119Theme
+import com.example.asm_ph33119.ui.theme.Screens
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,7 +48,10 @@ class MainActivity : ComponentActivity() {
                             Signin(navControl)
                         }
                         composable("Home"){
-                            BottomNavigation()
+                            BottomNavigation(navControl)
+                        }
+                        composable(Screens.ProductInformation.screen){
+                            ProductDetail()
                         }
                     }
                 }

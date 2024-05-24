@@ -35,8 +35,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.asm_ph33119.R
 import com.example.asm_ph33119.data.Products
+import com.example.asm_ph33119.ui.theme.Screens
 
 val productLists = listOf(
     Products(1, "Black Simple Lamp", 100.0,  R.drawable.sp1, false),
@@ -55,9 +57,9 @@ val productLists = listOf(
 
 val cartList = mutableListOf<Products>()
 
-@Preview
+
 @Composable
-fun ProductSection() {
+fun ProductSection(navControl: NavHostController) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2), // 2 columns
         modifier = Modifier.fillMaxSize(),
@@ -66,20 +68,20 @@ fun ProductSection() {
         verticalArrangement = Arrangement.spacedBy(16.dp) // Vertical spacing between items
     ) {
         items(productLists.size) { index ->
-            ProductItem(index)
+            ProductItem(index,navControl)
         }
     }
 }
 
 @Composable
-fun ProductItem(index: Int) {
+fun ProductItem(index: Int,navControl: NavHostController) {
     val product = productLists[index]
 
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(15.dp))
-            .clickable { }
+            .clickable { navControl.navigate(Screens.ProductInformation.screen) }
             .padding(8.dp),
         contentAlignment = Alignment.Center
     ) {

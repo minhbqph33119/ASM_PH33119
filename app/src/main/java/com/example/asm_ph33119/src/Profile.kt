@@ -103,160 +103,161 @@ fun Profile(){
                     color = Color(0xff808080))
             }
         }
-        Card(
-            colors = CardDefaults.cardColors(containerColor = Color.White),
-            elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
-            shape = RoundedCornerShape(0.dp),
-            modifier = Modifier
-                .padding(top = 30.dp)
-                .padding(horizontal = 20.dp)
-                .fillMaxWidth()
-                .height(80.dp)
-                .clickable {  }
-        ) {
-            Row(modifier = Modifier.align(Alignment.Start)
-                .fillMaxSize()
-                .padding(horizontal = 20.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceBetween) {
-                Column(modifier = Modifier) {
-                    Text(text = "My orders",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 20.sp,
-                        color = Color(0xff242424),
-                        modifier = Modifier.padding(bottom = 5.dp))
-                    Text(text = "Already have 10 orders",
-                        color = Color(0xff808080)
-                    )
+        Column(modifier = Modifier.padding(top = 20.dp)) {
+            Card(
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
+                shape = RoundedCornerShape(0.dp),
+                modifier = Modifier
+                    .padding(horizontal = 20.dp)
+                    .fillMaxWidth()
+                    .height(80.dp)
+                    .clickable {  }
+            ) {
+                Row(modifier = Modifier.align(Alignment.Start)
+                    .fillMaxSize()
+                    .padding(horizontal = 20.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween) {
+                    Column(modifier = Modifier) {
+                        Text(text = "My orders",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 20.sp,
+                            color = Color(0xff242424),
+                            modifier = Modifier.padding(bottom = 5.dp))
+                        Text(text = "Already have 10 orders",
+                            color = Color(0xff808080)
+                        )
+                    }
+                    Icon(imageVector = Icons.Default.NavigateNext,
+                        contentDescription = "",
+                        modifier = Modifier.size(30.dp),)
                 }
-                Icon(imageVector = Icons.Default.NavigateNext,
-                    contentDescription = "",
-                    modifier = Modifier.size(30.dp),)
             }
-        }
-        Card(
-            colors = CardDefaults.cardColors(containerColor = Color.White),
-            elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
-            shape = RoundedCornerShape(0.dp),
-            modifier = Modifier
-                .padding(top = 20.dp)
-                .padding(horizontal = 20.dp)
-                .fillMaxWidth()
-                .height(80.dp)
-                .clickable {  }
-        ) {
-            Row(modifier = Modifier.align(Alignment.Start)
-                .fillMaxSize()
-                .padding(horizontal = 20.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceBetween) {
-                Column(modifier = Modifier) {
-                    Text(text = "Shipping Addresses",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 20.sp,
-                        color = Color(0xff242424),
-                        modifier = Modifier.padding(bottom = 5.dp))
-                    Text(text = "03 Addresses",
-                        color = Color(0xff808080)
-                    )
+            Card(
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
+                shape = RoundedCornerShape(0.dp),
+                modifier = Modifier
+                    .padding(top = 20.dp)
+                    .padding(horizontal = 20.dp)
+                    .fillMaxWidth()
+                    .height(80.dp)
+                    .clickable {  }
+            ) {
+                Row(modifier = Modifier.align(Alignment.Start)
+                    .fillMaxSize()
+                    .padding(horizontal = 20.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween) {
+                    Column(modifier = Modifier) {
+                        Text(text = "Shipping Addresses",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 20.sp,
+                            color = Color(0xff242424),
+                            modifier = Modifier.padding(bottom = 5.dp))
+                        Text(text = "03 Addresses",
+                            color = Color(0xff808080)
+                        )
+                    }
+                    Icon(imageVector = Icons.Default.NavigateNext,
+                        contentDescription = "",
+                        modifier = Modifier.size(30.dp),)
                 }
-                Icon(imageVector = Icons.Default.NavigateNext,
-                    contentDescription = "",
-                    modifier = Modifier.size(30.dp),)
             }
-        }
-        Card(
-            colors = CardDefaults.cardColors(containerColor = Color.White),
-            elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
-            shape = RoundedCornerShape(0.dp),
-            modifier = Modifier
-                .padding(top = 20.dp)
-                .padding(horizontal = 20.dp)
-                .fillMaxWidth()
-                .height(80.dp)
-                .clickable {  }
-        ) {
-            Row(modifier = Modifier.align(Alignment.Start)
-                .fillMaxSize()
-                .padding(horizontal = 20.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceBetween) {
-                Column(modifier = Modifier) {
-                    Text(text = "Payment Method",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 20.sp,
-                        color = Color(0xff242424),
-                        modifier = Modifier.padding(bottom = 5.dp))
-                    Text(text = "You have 2 cards",
-                        color = Color(0xff808080)
-                    )
+            Card(
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
+                shape = RoundedCornerShape(0.dp),
+                modifier = Modifier
+                    .padding(top = 20.dp)
+                    .padding(horizontal = 20.dp)
+                    .fillMaxWidth()
+                    .height(80.dp)
+                    .clickable {  }
+            ) {
+                Row(modifier = Modifier.align(Alignment.Start)
+                    .fillMaxSize()
+                    .padding(horizontal = 20.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween) {
+                    Column(modifier = Modifier) {
+                        Text(text = "Payment Method",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 20.sp,
+                            color = Color(0xff242424),
+                            modifier = Modifier.padding(bottom = 5.dp))
+                        Text(text = "You have 2 cards",
+                            color = Color(0xff808080)
+                        )
+                    }
+                    Icon(imageVector = Icons.Default.NavigateNext,
+                        contentDescription = "",
+                        modifier = Modifier.size(30.dp),)
                 }
-                Icon(imageVector = Icons.Default.NavigateNext,
-                    contentDescription = "",
-                    modifier = Modifier.size(30.dp),)
             }
-        }
-        Card(
-            colors = CardDefaults.cardColors(containerColor = Color.White),
-            elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
-            shape = RoundedCornerShape(0.dp),
-            modifier = Modifier
-                .padding(top = 20.dp)
-                .padding(horizontal = 20.dp)
-                .fillMaxWidth()
-                .height(80.dp)
-                .clickable {  }
-        ) {
-            Row(modifier = Modifier.align(Alignment.Start)
-                .fillMaxSize()
-                .padding(horizontal = 20.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceBetween) {
-                Column(modifier = Modifier) {
-                    Text(text = "My reviews",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 20.sp,
-                        color = Color(0xff242424),
-                        modifier = Modifier.padding(bottom = 5.dp))
-                    Text(text = "Reviews for 5 items",
-                        color = Color(0xff808080)
-                    )
+            Card(
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
+                shape = RoundedCornerShape(0.dp),
+                modifier = Modifier
+                    .padding(top = 20.dp)
+                    .padding(horizontal = 20.dp)
+                    .fillMaxWidth()
+                    .height(80.dp)
+                    .clickable {  }
+            ) {
+                Row(modifier = Modifier.align(Alignment.Start)
+                    .fillMaxSize()
+                    .padding(horizontal = 20.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween) {
+                    Column(modifier = Modifier) {
+                        Text(text = "My reviews",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 20.sp,
+                            color = Color(0xff242424),
+                            modifier = Modifier.padding(bottom = 5.dp))
+                        Text(text = "Reviews for 5 items",
+                            color = Color(0xff808080)
+                        )
+                    }
+                    Icon(imageVector = Icons.Default.NavigateNext,
+                        contentDescription = "",
+                        modifier = Modifier.size(30.dp),)
                 }
-                Icon(imageVector = Icons.Default.NavigateNext,
-                    contentDescription = "",
-                    modifier = Modifier.size(30.dp),)
             }
-        }
 
-        Card(
-            colors = CardDefaults.cardColors(containerColor = Color.White),
-            elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
-            shape = RoundedCornerShape(0.dp),
-            modifier = Modifier
-                .padding(top = 20.dp)
-                .padding(horizontal = 20.dp)
-                .fillMaxWidth()
-                .height(80.dp)
-                .clickable {  }
-        ) {
-            Row(modifier = Modifier.align(Alignment.Start)
-                .fillMaxSize()
-                .padding(horizontal = 20.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceBetween) {
-                Column(modifier = Modifier) {
-                    Text(text = "Setting",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 20.sp,
-                        color = Color(0xff242424),
-                        modifier = Modifier.padding(bottom = 5.dp))
-                    Text(text = "Notification, Password, FAQ, Contact",
-                        color = Color(0xff808080)
-                    )
+            Card(
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
+                shape = RoundedCornerShape(0.dp),
+                modifier = Modifier
+                    .padding(top = 20.dp)
+                    .padding(horizontal = 20.dp)
+                    .fillMaxWidth()
+                    .height(80.dp)
+                    .clickable {  }
+            ) {
+                Row(modifier = Modifier.align(Alignment.Start)
+                    .fillMaxSize()
+                    .padding(horizontal = 20.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween) {
+                    Column(modifier = Modifier) {
+                        Text(text = "Setting",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 20.sp,
+                            color = Color(0xff242424),
+                            modifier = Modifier.padding(bottom = 5.dp))
+                        Text(text = "Notification, Password, FAQ, Contact",
+                            color = Color(0xff808080)
+                        )
+                    }
+                    Icon(imageVector = Icons.Default.NavigateNext,
+                        contentDescription = "",
+                        modifier = Modifier.size(30.dp),)
                 }
-                Icon(imageVector = Icons.Default.NavigateNext,
-                    contentDescription = "",
-                    modifier = Modifier.size(30.dp),)
             }
         }
 
