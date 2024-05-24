@@ -183,7 +183,7 @@ fun Signin(navControl: NavHostController){
 
                     }
                     TextButton(
-                        onClick = {navControl.navigate("Login")},
+                        onClick = {navControl.popBackStack()},
                         modifier = Modifier.align(Alignment.CenterHorizontally).padding(top = 10.dp)) {
                         Text(text = "Already have account? ",
                             color = Color(0xFF606060))
