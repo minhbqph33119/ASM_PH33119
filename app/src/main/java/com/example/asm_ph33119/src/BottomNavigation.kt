@@ -150,7 +150,7 @@ fun MyBottomAppBar(navControl: NavHostController) {
             composable(Screens.Home.screen){ Home(navControl)}
             composable(Screens.BookMark.screen){ Favorite(navControl) }
             composable(Screens.Notification.screen){ Notification() }
-            composable(Screens.Profile.screen){ Profile() }
+            composable(Screens.Profile.screen){ Profile(navControl) }
 
 
         }

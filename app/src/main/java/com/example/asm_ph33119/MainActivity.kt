@@ -13,6 +13,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.asm_ph33119.src.BottomNavigation
 import com.example.asm_ph33119.src.Cart
+import com.example.asm_ph33119.src.Favorite
 import com.example.asm_ph33119.src.Login
 import com.example.asm_ph33119.src.ProductInformation
 import com.example.asm_ph33119.src.Signin
@@ -36,10 +37,10 @@ class MainActivity : ComponentActivity() {
                         composable("Welcome"){
                             Welcome(navControl)
                         }
-                        composable("Login"){
+                        composable(Screens.Login.screen){
                             Login(navControl)
                         }
-                        composable("Signin"){
+                        composable(Screens.Signin.screen){
                             Signin(navControl)
                         }
                         composable("Home"){
@@ -51,6 +52,7 @@ class MainActivity : ComponentActivity() {
                         composable(Screens.Cart.screen){
                             Cart(navControl)
                         }
+
                     }
                 }
             }

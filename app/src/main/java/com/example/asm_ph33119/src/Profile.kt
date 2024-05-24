@@ -38,11 +38,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.asm_ph33119.R
+import com.example.asm_ph33119.ui.theme.Screens
 
-@Preview(showBackground = true)
+
 @Composable
-fun Profile(){
+fun Profile(navControl: NavHostController){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -72,7 +74,8 @@ fun Profile(){
             Icon(
                 Icons.Default.Logout,
                 contentDescription = null,
-                modifier = Modifier.size(30.dp))
+                modifier = Modifier.size(30.dp)
+                    .clickable { navControl.navigate(Screens.Login.screen) })
 
         }
         Row(
